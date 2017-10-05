@@ -1,1 +1,1 @@
-# JavaWebArithmetric
+# JavaWebArithmetic
