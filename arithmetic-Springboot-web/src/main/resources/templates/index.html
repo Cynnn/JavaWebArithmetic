@@ -1,0 +1,59 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cyan</title>
+    <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />  
+    <script type="text/javascript"> 
+
+    function chkform(){ 
+    	 if(document.getElementById("userresult").value == document.getElementById("rightresult").innerText){
+    		 alert("Right"); 
+    		 return false;
+    	 }
+
+    }
+    </script> 
+    
+</head>
+
+<body>
+<div class="container">
+    <h1>四则运算生成程序</h1>
+    <p>Hello Cyan！</p>
+    <div th:if="${not #lists.isEmpty(expression)}">
+       <div class="panel panel-primary">
+          <div class="panel-heading">
+             <h3 class="panel-title">本次测试共10题，总分为100分</h3>
+          </div>
+          <div class="panel-body">
+              <ul class="list-group">
+                  <li class="list-group-item" th:each="arithmeticExpression:${expression}">
+                      <span th:text="${arithmeticExpression.expression}"></span>
+                      <span th:text="${arithmeticExpression.result}" style="display:none" id="rightresult"></span>
+                      
+                      <form action="" name="myform">                     
+                        <input type="text" name="userresult" id="userresult"></input>
+                                            
+                        <input type="submit" onclick="return chkform()" value="判断正误"></input> 
+                     </form>                  
+                      
+                      
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script th:src="@{jquery-3.2.1.min.js}" type="text/javascript"></script>
+<script th:src="@{bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+<script th:inline="javascript">
+    //var single = [[${singlePerson}]];
+    //console.log(single.name+"/"+single.age);
+    function getResult(result) {
+        console.log(result);
+    }
+</script>
+</body>
+</html>
