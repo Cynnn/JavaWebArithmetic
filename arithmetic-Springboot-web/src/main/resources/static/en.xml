@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Doc>
+	<Public>
+		<titleH1>Arithmetic</titleH1>
+		<titleH3>The test consists of 10 questions. Total score is 100 points</titleH3>
+		<startBtn>start</startBtn>
+		<stopBtn>end</stopBtn>
+		<judgeBtn>True or False</judgeBtn>
+		<refreshBtn>refresh</refreshBtn>
+		<rightSp>right:</rightSp>
+		<wrongSp>wrong:</wrongSp>
+	</Public>
+</Doc>

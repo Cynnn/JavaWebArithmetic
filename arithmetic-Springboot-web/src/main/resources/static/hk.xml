@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Doc>
+	<Public>
+		<titleH1>四則運算生成程序</titleH1>
+		<titleH3>本次測試共10題，總分為100分</titleH3>
+		<startBtn>開始答題</startBtn>
+		<stopBtn>結束答題</stopBtn>
+		<judgeBtn>判斷正誤</judgeBtn>
+		<refreshBtn>刷新</refreshBtn>
+		<rightSp>對：</rightSp>
+		<wrongSp>錯：</wrongSp>
+	</Public>
+</Doc>
