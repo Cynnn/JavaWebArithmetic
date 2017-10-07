@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    font-size: 10px;
+}
+
+.container-fluid {
+    min-height: 100%;
+    height: 100%;
+    background: #772953;
+    text-align: center;
+    
+}
+
+.fill{
+	width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background: #772953;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+
+#runner{
+	font-size: 20rem;
+	color: #fff;
+	font-family: 'Nixie One', cursive;
+	font-weight: 300;
+	text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/*button styles */
+
+button{
+	height: 10rem;
+	width: 10rem;
+	border: 2px solid #BB94A9;
+	border-radius:50%;
+	transition:all .5s ease;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	
+}
+
+button:hover{
+	transform:rotate(360deg);
+	cursor: pointer;
+}
+
+button:focus{
+	transform:scale(2);
+	outline: 0;
+	z-index: 999;
+	border-color: #DD4814;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#startBtn{
+	background: url("../img/icon-play.svg");
+	background-size: contain;
+}
+
+#stopBtn{
+	background: url("../img/icon-pause.svg");
+	background-size: contain;
+}
+
+#resetBtn{
+	background: url("../img/icon-replay.svg");
+	background-size: contain;
+}
+
+.activeBtn{
+	transform:scale(2);
+	z-index: 999;
+	border-color: #DD4814;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+.centered button{
+	text-align: center;
+}
+
+
+@media(max-width: 920px){
+	#runner{
+		font-size: 18rem;
+	}
+}
+
+@media(max-width: 830px){
+	#runner{
+		font-size: 16rem;
+	}
+}
+
+@media(max-width: 740px){
+	#runner{
+		font-size: 14rem;
+	}
+
+
+}
+
+@media(max-width: 650px){
+	#runner{
+		font-size: 12rem;
+	}
+}
+
+@media(max-width: 560px){
+	#runner{
+		font-size: 10rem;
+	}
+
+	button{
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+@media(max-width: 470px){
+	#runner{
+		font-size: 8rem;
+	}
+
+}
+
+@media(max-width: 390px){
+	#runner{
+		font-size: 6rem;
+	}
+}
