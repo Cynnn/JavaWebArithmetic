@@ -89,12 +89,8 @@ $('#hkBtn').click(function() {
 
 $('#numberBtn').click(function(){
 	var number = document.getElementById("numberText");
-	$.get("/number",{Action:"Number",Number:number.value},function(data,textStatus){
-		document.clear();
-		document.write(data);
-		});
-}
-
+	var url = "http://localhost:8080/number?Action=getnumber&Number="+number.value;
+	window.open(url,"_blank");
 );
 
 var flag = false;
