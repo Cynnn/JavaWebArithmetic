@@ -16,7 +16,7 @@ public class ArthmeticService {
 	public ArrayList<Question> getQuestionList(int size){
 		ArrayList<Question> Expression = new ArrayList<>();
 		Random random = new Random();
-		int operators_num = random.nextInt(3)+1;
+		int operators_num = random.nextInt(6)+1;
         for(int i=0;i<size;i++){
         	Expression.add(new Question(operators_num));
         }
@@ -24,7 +24,7 @@ public class ArthmeticService {
 	}
 	
 	public boolean writeTxtFile(int right,int wrong){
-		File fileName = new File("/record.txt");
+		File fileName = new File("d:/record.txt");
 		String content = right +"\t"+wrong;
 		try{
 			if(!fileName.exists()){  
@@ -44,7 +44,7 @@ public class ArthmeticService {
 		  String result=null;  
 		  FileReader fileReader=null;  
 		  BufferedReader bufferedReader=null;  
-		  File fileName = new File("/record.txt");
+		  File fileName = new File("d:/record.txt");
 		  System.out.println(fileName.getAbsolutePath());
 		  try{  
 			  if(!fileName.exists()){  
@@ -66,7 +66,7 @@ public class ArthmeticService {
 		  }catch(Exception e){  
 		   e.printStackTrace();  
 		  } 
-		  System.out.println("读取出来的文件内容是："+"\r\n"+result);  
+		  System.out.println("璇诲彇鍑烘潵鐨勬枃浠跺唴瀹规槸锛�"+"\r\n"+result);  
 		  return result;  
 		 }  
 
