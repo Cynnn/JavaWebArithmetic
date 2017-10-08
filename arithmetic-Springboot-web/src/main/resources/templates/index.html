@@ -70,9 +70,9 @@ function toTop(){
           <div class="panel-body">
               <ul class="list-group" id="list">
                   <li class="list-group-item" th:each="arithmeticExpression:${expression}">
-                      <span th:text="${arithmeticExpression.expression}" style="display:inline-block;width:400px;text-align:left;"></span>
-                      <span th:text="${arithmeticExpression.printResult()}" style="display:none" id="rightresult"></span>                                        
-                       <input type="text" name="userresult" id="userresult"></input>                                                            
+                      <span th:text="${arithmeticExpression.expression}" style="display:inline-block;width:400px;text-align:left;"></span>                                       
+                       <input type="text" name="userresult" id="userresult"></input>  
+                       <span th:text="${arithmeticExpression.printResult()}" style="display:none" id="rightresult"></span>                                                          
                   </li>
               </ul>
           </div>
