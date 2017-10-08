@@ -2,59 +2,35 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>用户登录</title>
-<meta name="keywords" content=""/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width"/>
-<link href="public/css/base.css" rel="stylesheet" type="text/css"/>
-<link href="public/css/login.css" rel="stylesheet" type="text/css"/>
+<title>欢迎页</title>
+<style type="text/css">  
+body {  
+    margin: 0;  
+    background-image: url('background.jpg');    
+    background-repeat:no-repeat;  
+        background-position:0% 0%;  
+    background-size:cover;  
+    background-color: #FFF;  
+} 
+
+</style>   
+
+
 </head>
 <body>
+<div class="container">
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<p style="width: 100%;height: 10px;display: block;line-height: 10px;text-align: center;font-size:100px;color:white" >Arithmetic</p>
+<p style="width: 100%;height: 10px;display: block;line-height: 10px;text-align: center;font-size:30px;color:white" >Please input the number of questions every time</p>
+<span style="display:inline-block;width:650px;text-align:left;"></span>
 
-<div class="login">
-<form action="" method="post" id="form">
-    <div class="login_form">
-    <div><p class="name">用户登录</p>
-	<p>&nbsp;</p></div>
-    	<div class="user">
-        	<input class="text_value" value="" name="username" type="text" id="username"/>
-            <input class="text_value" value="" name="password" type="password" id="password"/>
-        </div>
-        <button class="button" id="submit" type="submit">登录</button>
-    </div>
-    
-    <div id="tip"></div>
-    <div class="foot">
-	Copyright &copy; 2017
-    </div>
-    </form>
+<input type="text" id="numberText" ></input>
+<input class="btn btn-success btn-lg" id="numberBtn" type="submit" onclick="window.location.href='http://localhost:8080/Arithmetic'" value="Start"></input>
+
+
+
 </div>
-<script>var basedir='public/ui/';</script>
-<script src="public/ui/do.js"></script>
-<script src="public/ui/config.js"></script>
-<script>
-Do.ready('form', function() {
-	$("#form").Validform({
-			ajaxPost:true,
-			postonce:true,
-			tiptype:function(msg,o,cssctl){
-				if(!o.obj.is("form")){
-					var objtip=o.obj.siblings(".Validform_checktip");
-					cssctl(objtip,o.type);
-					objtip.text(msg);
-				}else{
-					var objtip=o.obj.find("#tip");
-					cssctl(objtip,o.type);
-					if(o.type==2){
-						window.location.href='index.php?r=admin/index/index';
-					}else{
-						objtip.text(msg);
-					}
-				}
-			}
-	});
-});
 
-</script>
+
 </body>
 </html>
