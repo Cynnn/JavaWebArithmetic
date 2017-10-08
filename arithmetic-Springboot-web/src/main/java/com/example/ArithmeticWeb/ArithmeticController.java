@@ -40,7 +40,7 @@ public class ArithmeticController {
 		model.addAttribute("wrong", wrong);
         return "index";
     }
-	@RequestMapping(value ="/")
+	@RequestMapping(value ="/Arithmetic")
     public String index(Model model) {
 		ArrayList<Question> Expression = arthmeticService.getQuestionList(10);
         model.addAttribute("expression", Expression);
