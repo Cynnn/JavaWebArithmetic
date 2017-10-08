@@ -1,46 +1,85 @@
 ﻿<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Cyan</title>
+    <title>Arithmetic</title>
     <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />  
     <link rel="stylesheet" th:src="@{style.css}"/>
-    
+<script type="text/javascript">
+function toTop(){
+	window.scroll(0,0);
+ }
+</script>   
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">四则运算生成程序</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav navbar-right"> 
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">历史记录</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          语言切换 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a id="chBtn" type="submit">中文简体</a></li>
+                    <li><a id="hkBtn" type="submit">中文繁体</a></li>
+                    <li><a id="enBtn" type="submit" >英文</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+	</div>
+</nav>
+<div class="jumbotron">
 <div class="container">
-    <h1 id="titleH1">四则运算生成程序</h1>
-    <input type="text" id="numberText"></input>
-    <input id="numberBtn" type="submit" value="提交"></input>
+<br></br><br></br>
+<span style="display:inline-block;width:800px;text-align:left;font-size:50px;"  th:text="欢迎来到Arithmetic"></span>
+<span id="runner" style="font-size:40px"></span>
+<span style="display:inline-block;text-align:left;font-size:25px;"  th:text="在这里，你可以做四则运算计算练习，记录自己做题的时间.在这里，你能够查看做题的历史记录"></span><br></br>
+<span style="display:inline-block;text-align:left;font-size:25px;"  th:text="这里是Arthimetic"></span><br></br><br></br>
+<input class="btn btn-primary" id="startBtn" type="submit" value="开始答题>>"></input>
+<input class="btn btn-primary" id="stopBtn" type="submit" value="结束答题>>"></input>           
+ 
+
+</div>
+</div>
+<div class="container">
     <div th:if="${not #lists.isEmpty(expression)}">
-       <div class="panel panel-primary">
-       <input id="enBtn" type="submit" value="en"></input>
-       <input id="chBtn" type="submit" value="ch"></input>
-       <input id="hkBtn" type="submit" value="hk"></input>
+       <div class="panel panel-default">
           <div class="panel-heading">
-             <h3 class="panel-title" id="titleH3">本次测试共10题，总分为100分</h3>
-             <span id="runner"></span><br></br>
-             <input id="startBtn" type="submit" value="开始答题"></input>
-             <input id="stopBtn" type="submit" value="结束答题"></input>
-             <input id="judgeBtn" type="submit" onclick="return chkform()" value="判断正误"></input>
-             <input id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
+             <h3 class="panel-title" id="titleH3">本次测试共10题，总分为100分
+             <span style="display:inline-block;width:700px;text-align:left;"></span>
+              <input class="btn btn-default" id="judgeBtn" type="submit" onclick="return chkform()" value="判断正误"></input>
+              <input class="btn btn-default" id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
+             </h3>
+          </div>
+              <input type="text" id="numberText"></input>
+             <input id="numberBtn" type="submit" value="提交"></input>
+
+
              <span id="rightSp" th:text="对："></span><span th:text="${right}"></span>
              <span id="wrongSp" th:text="错："></span><span th:text="${wrong}"></span>
-          </div>
+
           <div class="panel-body">
               <ul class="list-group" id="list">
                   <li class="list-group-item" th:each="arithmeticExpression:${expression}">
-                      <span th:text="${arithmeticExpression.expression}"></span>
-                      <span th:text="${arithmeticExpression.printResult()}" style="display:none" id="rightresult"></span>
-                                         
-                        <input type="text" name="userresult" id="userresult"></input>
-                                                             
-                      
-                      
+                      <span th:text="${arithmeticExpression.expression}" style="display:inline-block;width:400px;text-align:left;"></span>
+                      <span th:text="${arithmeticExpression.printResult()}" style="display:none" id="rightresult"></span>                                        
+                       <input type="text" name="userresult" id="userresult"></input>                                                            
                   </li>
               </ul>
           </div>
+          	<div class="panel-footer">
+          	<span style="display:inline-block;width:950px;text-align:left;"></span>
+          	<input class="btn btn-default" id="toTop" type="submit" onclick="toTop()" value="返回页面顶部"></input>
+          	</div>
       </div>
   </div>
 </div>
