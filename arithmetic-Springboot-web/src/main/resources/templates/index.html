@@ -16,14 +16,14 @@ function toTop(){
     <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#">四则运算生成程序</a>
+        <a class="navbar-brand" id="na1" href="#">四则运算生成程序</a>
     </div>
     <div>
         <ul class="nav navbar-nav navbar-right"> 
-            <li class="active"><a href="login">首页</a></li>
-            <li><a href="#">历史记录</a></li>
+            <li class="active"><a href="login" id="index">首页</a></li>
+            <li><a href="#" id="history">历史记录</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="la">
                           语言切换 <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -40,18 +40,18 @@ function toTop(){
 <div class="jumbotron">
 <div class="container">
 <br></br><br></br>
-<span style="display:inline-block;width:900px;text-align:left;font-size:50px;"  th:text="欢迎来到Arithmetic"></span>
+<span style="display:inline-block;width:900px;text-align:left;font-size:50px;" id="head" th:text="欢迎来到Arithmetic"></span>
 
 
 
 
 
 
-<span style="display:inline-block;text-align:left;font-size:25px;"  th:text="在这里，你可以做四则运算计算练习，记录自己做题的时间。在这里，你能够查看做题的历史记录。"></span><br></br>
-<span style="display:inline-block;text-align:left;font-size:25px;"  th:text="这里是Arthimetic"></span><br></br><br></br>
+<span style="display:inline-block;text-align:left;font-size:25px;" id="text1" th:text="在这里，你可以进行四则运算练习，记录自己做题的时间。在这里，你能够查看做题的历史记录"></span><br></br>
+<span style="display:inline-block;text-align:left;font-size:25px;" id="text2" th:text="这里是Arthimetic"></span><br></br><br></br>
 <input class="btn btn-primary" id="startBtn" type="submit" value="开始答题>>"></input>
 <input class="btn btn-primary" id="stopBtn" type="submit" value="结束答题>>"></input>
-<span style="display:inline-block;width:800px;text-align:left;"></span>          
+          
 <span id="runner" style="font-size:30px;"></span> 
 
 </div>
@@ -66,12 +66,10 @@ function toTop(){
               <input class="btn btn-default" id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
              </h3>
           </div>
-              <input type="text" id="numberText"></input>
-             <input id="numberBtn" type="submit" value="提交"></input>
+              
 
-
-             <span id="rightSp" th:text="对："></span><span th:text="${right}"></span>
-             <span id="wrongSp" th:text="错："></span><span th:text="${wrong}"></span>
+             <span id="rightSp" th:text="对：" style="display:none"></span><span id="rightSpTxt" th:text="${right}" style="display:none"></span>
+             <span id="wrongSp" th:text="错：" style="display:none"></span><span id="wrongSpTxt" th:text="${wrong}" style="display:none"></span>
 
           <div class="panel-body">
               <ul class="list-group" id="list">
