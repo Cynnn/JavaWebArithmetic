@@ -17,10 +17,29 @@ public class ArithmeticController {
 	@Autowired
 	private ArthmeticService arthmeticService;
 	
-	@RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String login(){  
-        return "login";  
+	@RequestMapping(value = "/getNumber",method = RequestMethod.GET)
+    public String login(Model model,@RequestParam(value="Action",required=true) String action,
+    		@RequestParam(value="Number",required=true)String number){  
+		int num = Integer.parseInt(number);
+        ArrayList<Question> Expression = arthmeticService.getQuestionList(num);
+        model.addAttribute("expression", Expression);
+        int right=0;
+        int wrong=0;
+        String str =arthmeticService.readTxtFile();
+		if(str!=null&&!str.equals("")){
+		String[] splits = str.split("\t");
+		right = Integer.parseInt(splits[0]);
+		wrong = Integer.parseInt(splits[1]);
+		}
+		model.addAttribute("right", right);
+		model.addAttribute("wrong", wrong);
+        return "index";
     }
+	
+	@RequestMapping(value = "/login")
+	public String login(){
+		return "login";
+	}
 	
 	@RequestMapping(value ="/number",method = RequestMethod.GET)
     public String getNumber(Model model,@RequestParam(value="Action",required=true) String action,
