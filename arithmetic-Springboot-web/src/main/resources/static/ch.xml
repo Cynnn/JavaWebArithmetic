@@ -8,7 +8,7 @@
 		<chBtn>中文简体</chBtn>
 		<hkBtn>中文繁体</hkBtn>
 		<enBtn>英文</enBtn>
-		<titleH3>本次测试共10题，总分为100分</titleH3>
+		<titleH3>本次测试题目数：</titleH3>
 		<startBtn>开始答题</startBtn>
 		<stopBtn>结束答题</stopBtn>
 		<judgeBtn>判断正误</judgeBtn>
