@@ -8,7 +8,7 @@
 		<chBtn>Chinese-Simplified</chBtn>
 		<hkBtn>Chinese-Traditional</hkBtn>
 		<enBtn>English</enBtn>
-		<titleH3>The test consists of 10 questions. Total score is 100 points</titleH3>
+		<titleH3>The number of questions:</titleH3>
 		<startBtn>start</startBtn>
 		<stopBtn>end</stopBtn>
 		<judgeBtn>True or False</judgeBtn>
