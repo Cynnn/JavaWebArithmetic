@@ -9,10 +9,10 @@
 		<hkBtn>Chinese-Traditional</hkBtn>
 		<enBtn>English</enBtn>
 		<titleH3>The number of questions:</titleH3>
-		<startBtn>start</startBtn>
-		<stopBtn>end</stopBtn>
+		<startBtn>Start</startBtn>
+		<stopBtn>End</stopBtn>
 		<judgeBtn>True or False</judgeBtn>
-		<refreshBtn>refresh</refreshBtn>
+		<refreshBtn>Refresh</refreshBtn>
 		<rightSp>right:</rightSp>
 		<wrongSp>wrong:</wrongSp>
 		<na1>Arithmetic</na1>

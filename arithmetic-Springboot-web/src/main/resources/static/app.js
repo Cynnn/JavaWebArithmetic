@@ -96,7 +96,7 @@ $('#numberBtn').click(function(){
 $('#history').click(function(){
 	var wrong = document.getElementById("wrongSpTxt");
 	var right = document.getElementById("rightSpTxt");
-	alert("right:"+right.innerHTML+"wrong:"+wrong.innerHTML);
+	alert("right:"+right.innerHTML+" "+"wrong:"+wrong.innerHTML);
 });
 
 
@@ -126,7 +126,7 @@ function chkform(){
 	}
 	}
 	$.post("/index",{Action:"chkform",Right:right,Wrong:wrong},function(data,textStatus){
-		alert("right:"+right+"wrong:"+wrong);});
+		alert("right:"+right+" "+"wrong:"+wrong);});
 	
 }
 var lang = "hk";

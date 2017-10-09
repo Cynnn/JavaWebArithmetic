@@ -18,7 +18,7 @@
 		<numberBtn>开始</numberBtn>
 		<na1>四则运算生成程序</na1>
 		<head>欢迎来到Arithmetic</head>
-		<text1>在这里，你可以进行四则运算练习，记录自己做题的时间。在这里，你能够查看做题的历史记录</text1>
+		<text1>在这里，你不仅能进行四则运算练习，还能记录自己做题的时间。在这里，你可以查看做题的历史记录</text1>
 		<text2>这里是Arthimetic</text2>
 		<toTop>返回页面顶部</toTop>
 	</Public>

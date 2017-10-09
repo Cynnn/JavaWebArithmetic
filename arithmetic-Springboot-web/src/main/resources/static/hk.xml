@@ -8,7 +8,7 @@
 		<chBtn>中文簡體</chBtn>
 		<hkBtn>中文繁體</hkBtn>
 		<enBtn>英文</enBtn>
-		<titleH3>本次测试题数：</titleH3>
+		<titleH3>本次測試題目數：</titleH3>
 		<startBtn>開始答題</startBtn>
 		<stopBtn>結束答題</stopBtn>
 		<judgeBtn>判斷正誤</judgeBtn>
@@ -18,7 +18,7 @@
 		<numberBtn>開始</numberBtn>
 		<na1>四則運算生成程序</na1>
 		<head>歡迎來到Arithmetic</head>
-		<text1>在這裏，妳可以進行四則運算練習，記錄自己做題的時間。在這裏，妳能夠查看做題的歷史記錄</text1>
+		<text1>在這裏，妳不僅能進行四則運算練習，還能記錄自己做題的時間。在這裏，妳可以查看做題的歷史記錄</text1>
 		<text2>這裏是Arthimetic</text2>
 		<toTop>返回頁面頂部</toTop>
 	</Public>

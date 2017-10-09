@@ -5,11 +5,11 @@
     <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />  
     <link rel="stylesheet" th:src="@{style.css}"/>
-<script type="text/javascript">
-function toTop(){
-	window.scroll(0,0);
- }
-</script>   
+    <script type="text/javascript">
+    function toTop(){
+	    window.scroll(0,0);
+    }
+    </script>   
 </head>
 
 <body>
@@ -24,7 +24,7 @@ function toTop(){
             <li><a href="#" id="history">历史记录</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="la">
-                          语言切换 <b class="caret"></b>
+                                            语言切换 <b class="caret"></b>               
                 </a>
                 <ul class="dropdown-menu">
                     <li><a id="chBtn" type="submit">中文简体</a></li>
@@ -41,18 +41,12 @@ function toTop(){
 <div class="container">
 <br></br><br></br>
 <span style="display:inline-block;width:900px;text-align:left;font-size:50px;" id="head" th:text="欢迎来到Arithmetic"></span>
-
-
-
-
-
-
-<span style="display:inline-block;text-align:left;font-size:25px;" id="text1" th:text="在这里，你可以进行四则运算练习，记录自己做题的时间。在这里，你能够查看做题的历史记录"></span><br></br>
+<span style="display:inline-block;text-align:left;font-size:25px;" id="text1" th:text="在这里，你不仅能进行四则运算练习，还能记录自己做题的时间。在这里，你可以查看做题的历史记录"></span><br></br>
 <span style="display:inline-block;text-align:left;font-size:25px;" id="text2" th:text="这里是Arthimetic"></span><br></br><br></br>
 <input class="btn btn-primary" id="startBtn" type="submit" value="开始答题>>"></input>
 <input class="btn btn-primary" id="stopBtn" type="submit" value="结束答题>>"></input>
           
-<span id="runner" style="font-size:30px;"></span> 
+<span id="runner" style="font-size:30px;text-align:right"></span> 
 
 </div>
 </div>
@@ -62,7 +56,7 @@ function toTop(){
           <div class="panel-heading">
              <span class="panel-title" id="titleH3">本次测试题目数：</span>
              <span id="questionNumber" th:text="${expression.size()}"></span>
-             <span style="display:inline-block;width:700px;text-align:left;"></span>
+             <span style="display:inline-block;width:800px;text-align:left;"></span>
               <input class="btn btn-default" id="judgeBtn" type="submit" onclick="return chkform()" value="判断正误"></input>
               <input class="btn btn-default" id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
           </div>
