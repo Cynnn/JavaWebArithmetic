@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?> 
 <Doc>
 	<Public>
-		<titleH1>四则运算生成程序</titleH1>
+		<na1>四则运算生成程序</na1>
+		<index>首页</index>
+		<history>历史记录</history>
+		<la>语言切换</la>
+		<chBtn>中文简体</chBtn>
+		<hkBtn>中文繁体</hkBtn>
+		<enBtn>英文</enBtn>
 		<titleH3>本次测试共10题，总分为100分</titleH3>
 		<startBtn>开始答题</startBtn>
 		<stopBtn>结束答题</stopBtn>
@@ -9,5 +15,11 @@
 		<refreshBtn>刷新</refreshBtn>
 		<rightSp>对：</rightSp>
 		<wrongSp>错：</wrongSp>
+		<numberBtn>开始</numberBtn>
+		<na1>四则运算生成程序</na1>
+		<head>欢迎来到Arithmetic</head>
+		<text1>在这里，你可以进行四则运算练习，记录自己做题的时间。在这里，你能够查看做题的历史记录</text1>
+		<text2>这里是Arthimetic</text2>
+		<toTop>返回页面顶部</toTop>
 	</Public>
 </Doc>

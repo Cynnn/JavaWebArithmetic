@@ -90,8 +90,15 @@ $('#hkBtn').click(function() {
 $('#numberBtn').click(function(){
 	var number = document.getElementById("numberText");
 	var url = "http://localhost:8080/number?Action=getnumber&Number="+number.value;
-	window.open(url,"_blank");
-);
+	top.location = url;
+});
+
+$('#history').click(function(){
+	var wrong = document.getElementById("wrongSpTxt");
+	var right = document.getElementById("rightSpTxt");
+	alert("right:"+right.innerHTML+"wrong:"+wrong.innerHTML);
+});
+
 
 var flag = false;
 function chkform(){ 
@@ -130,6 +137,8 @@ function ChangeLanguage() {
     TranslateElementsAsy(document, 'th', 'innerHTML', langpath); 
     TranslateElementsAsy(document, 'h3', 'innerHTML', langpath); 
     TranslateElementsAsy(document, 'h1', 'innerHTML', langpath); 
+    TranslateElementsAsy(document, 'a', 'innerHTML', langpath); 
+    
 }
 
 function getString(path, req_name, xmlDoc) {  
@@ -144,7 +153,7 @@ function getString(path, req_name, xmlDoc) {
 }  
 
 
-function TranslateElementsAsy(targetDocument, tag, propertyToSet, path) { //方法一  
+function TranslateElementsAsy(targetDocument, tag, propertyToSet, path) {   
     $.ajax({  
             url: path,  
             type: 'get',  
