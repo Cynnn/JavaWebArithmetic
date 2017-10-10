@@ -16,8 +16,8 @@ public class ArthmeticService {
 	public ArrayList<Question> getQuestionList(int size){
 		ArrayList<Question> Expression = new ArrayList<>();
 		Random random = new Random();
-		int operators_num = random.nextInt(6)+1;
         for(int i=0;i<size;i++){
+        	int operators_num = random.nextInt(6)+1;
         	Expression.add(new Question(operators_num));
         }
         return Expression;
