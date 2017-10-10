@@ -17,6 +17,7 @@ public class ArithmeticController {
 	@Autowired
 	private ArthmeticService arthmeticService;
 	
+	//获取传入个数的question
 	@RequestMapping(value = "/getNumber",method = RequestMethod.GET)
     public String login(Model model,@RequestParam(value="Action",required=true) String action,
     		@RequestParam(value="Number",required=true)String number){  
@@ -35,12 +36,12 @@ public class ArithmeticController {
 		model.addAttribute("wrong", wrong);
         return "index";
     }
-	
+	//登录界面映射
 	@RequestMapping(value = "/login")
 	public String login(){
 		return "login";
 	}
-	
+	//主界面的传输
 	@RequestMapping(value ="/number",method = RequestMethod.GET)
     public String getNumber(Model model,@RequestParam(value="Action",required=true) String action,
     		@RequestParam(value="Number",required=true)String number) {
@@ -75,6 +76,7 @@ public class ArithmeticController {
 		model.addAttribute("wrong", wrong);
         return "index";
     }
+	//获得用户的对错数
 	@RequestMapping(value ="/index",method = RequestMethod.POST)
     public String chkform(@RequestParam(value="Action",required=true)String action,
     		@RequestParam(value="Right",required=true)int right,

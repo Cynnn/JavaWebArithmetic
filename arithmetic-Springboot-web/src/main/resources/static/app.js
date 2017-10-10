@@ -1,3 +1,4 @@
+//秒表函数
 $('#runner').runner({
 
 milliseconds: false,
@@ -86,13 +87,13 @@ $('#hkBtn').click(function() {
     lang = "hk";
     ChangeLanguage();
 });
-
+//获得题目数的点击事件
 $('#numberBtn').click(function(){
 	var number = document.getElementById("numberText");
 	var url = "http://localhost:8080/number?Action=getnumber&Number="+number.value;
 	top.location = url;
 });
-
+//获取历史记录
 $('#history').click(function(){
 	var wrong = document.getElementById("wrongSpTxt");
 	var right = document.getElementById("rightSpTxt");
@@ -100,7 +101,8 @@ $('#history').click(function(){
 });
 
 
-var flag = false;
+var flag = false;//判断标志
+//检查结果
 function chkform(){ 
 	if(flag){
 		alert("已经判断过对错，请刷新页面！");
@@ -129,7 +131,8 @@ function chkform(){
 		alert("right:"+right+"wrong:"+wrong);});
 	
 }
-var lang = "hk";
+var lang = "hk";//语言变量
+//节点内容更改
 function ChangeLanguage() {  
     var langpath = lang + ".xml";//资源文件路径  
     TranslateElementsAsy(document, 'SPAN', 'innerHTML', langpath);  
@@ -140,7 +143,7 @@ function ChangeLanguage() {
     TranslateElementsAsy(document, 'a', 'innerHTML', langpath); 
     
 }
-
+//获取xml文件节点内容
 function getString(path, req_name, xmlDoc) {  
     //解析XML  
     //var oError = xmlDoc.parseError;  
@@ -152,7 +155,7 @@ function getString(path, req_name, xmlDoc) {
     }  
 }  
 
-
+//对不同节点，使用不同属性
 function TranslateElementsAsy(targetDocument, tag, propertyToSet, path) {   
     $.ajax({  
             url: path,  
