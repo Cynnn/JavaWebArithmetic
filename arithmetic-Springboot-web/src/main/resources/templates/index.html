@@ -54,13 +54,14 @@
     <div th:if="${not #lists.isEmpty(expression)}">
        <div class="panel panel-default">
           <div class="panel-heading">
-             <span class="panel-title" id="titleH3">本次测试题目数：</span>
-             <span id="questionNumber" th:text="${expression.size()}"></span>
-             <span style="display:inline-block;width:800px;text-align:left;"></span>
+          
+             <span class="panel-title" id="titleH3" style="display:inline-block;text-align:left;">本次测试题目数： </span>
+             <span id="questionNumber" th:text="${expression.size()}" style="display:inline-block;width:800px;"></span>             
               <input class="btn btn-default" id="judgeBtn" type="submit" onclick="return chkform()" value="判断正误"></input>
               <input class="btn btn-default" id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
           </div>
-              
+         
+             
 
              <span id="rightSp" th:text="对：" style="display:none"></span><span id="rightSpTxt" th:text="${right}" style="display:none"></span>
              <span id="wrongSp" th:text="错：" style="display:none"></span><span id="wrongSpTxt" th:text="${wrong}" style="display:none"></span>
@@ -75,8 +76,8 @@
               </ul>
           </div>
           	<div class="panel-footer">
-          	<span style="display:inline-block;width:950px;text-align:left;"></span>
-          	<input class="btn btn-default" id="toTop" type="submit" onclick="toTop()" value="返回页面顶部"></input>
+          	
+          	 <div style="text-align:right; vertical-align:middel;"><input class="btn btn-default" id="toTop" type="submit" onclick="toTop()" value="返回页面顶部"></input></div>
           	</div>
       </div>
   </div>

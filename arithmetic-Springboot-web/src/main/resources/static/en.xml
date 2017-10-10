@@ -8,10 +8,10 @@
 		<chBtn>Chinese-Simplified</chBtn>
 		<hkBtn>Chinese-Traditional</hkBtn>
 		<enBtn>English</enBtn>
-		<titleH3>The number of questions:</titleH3>
+		<titleH3>Number of Questions:</titleH3>
 		<startBtn>Start</startBtn>
 		<stopBtn>End</stopBtn>
-		<judgeBtn>True or False</judgeBtn>
+		<judgeBtn>Judge</judgeBtn>
 		<refreshBtn>Refresh</refreshBtn>
 		<rightSp>right:</rightSp>
 		<wrongSp>wrong:</wrongSp>
