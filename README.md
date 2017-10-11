@@ -10,11 +10,11 @@
 
 运行要求：
 
-1.Eclipse：包括maven ；jre：1.5及以上
+1.Eclipse：包括maven  jre：1.5及以上
+
+2.fourOperation.jar是上一次作业导出的jar文件，实现四则运算功能，构建项目时添加到项目库。
 
 3.下载本项目后，在Eclipse中File—>import—>Maven—>exiting maven project—>选择本项目所在位置。
-
-2.fourOperation.jar是上一次作业导出的jar文件，实现四则运算功能，构建项目时需要添加到项目库。
 
 
  
