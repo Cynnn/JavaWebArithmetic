@@ -30,7 +30,6 @@
                     <li><a id="chBtn" type="submit">中文简体</a></li>
                     <li><a id="hkBtn" type="submit">中文繁体</a></li>
                     <li><a id="enBtn" type="submit" >英文</a></li>
-
                 </ul>
             </li>
         </ul>
@@ -44,28 +43,22 @@
 <span style="display:inline-block;text-align:left;font-size:25px;" id="text1" th:text="在这里，你不仅能进行四则运算练习，还能记录自己做题的时间。在这里，你可以查看做题的历史记录"></span><br></br>
 <span style="display:inline-block;text-align:left;font-size:25px;" id="text2" th:text="这里是Arthimetic"></span><br></br><br></br>
 <input class="btn btn-primary" id="startBtn" type="submit" value="开始答题>>"></input>
-<input class="btn btn-primary" id="stopBtn" type="submit" value="结束答题>>"></input>
-          
+<input class="btn btn-primary" id="stopBtn" type="submit" value="结束答题>>"></input>          
 <span id="runner" style="font-size:30px;text-align:right"></span> 
-
 </div>
 </div>
 <div class="container">
     <div th:if="${not #lists.isEmpty(expression)}">
        <div class="panel panel-default">
-          <div class="panel-heading">
-          
+          <div class="panel-heading">          
              <span class="panel-title" id="titleH3" style="display:inline-block;text-align:left;">本次测试题目数： </span>
              <span id="questionNumber" th:text="${expression.size()}" style="display:inline-block;width:800px;"></span>             
               <input class="btn btn-default" id="judgeBtn" type="submit" onclick="return chkform()" value="判断正误"></input>
               <input class="btn btn-default" id="refreshBtn" type="submit" onclick="location.reload(true)" value="刷新"></input>
-          </div>
-         
+          </div>  
              
-
-             <span id="rightSp" th:text="对：" style="display:none"></span><span id="rightSpTxt" th:text="${right}" style="display:none"></span>
-             <span id="wrongSp" th:text="错：" style="display:none"></span><span id="wrongSpTxt" th:text="${wrong}" style="display:none"></span>
-
+          <span id="rightSp" th:text="对：" style="display:none"></span><span id="rightSpTxt" th:text="${right}" style="display:none"></span>
+          <span id="wrongSp" th:text="错：" style="display:none"></span><span id="wrongSpTxt" th:text="${wrong}" style="display:none"></span>
           <div class="panel-body">
               <ul class="list-group" id="list">
                   <li class="list-group-item" th:each="arithmeticExpression:${expression}">
@@ -75,10 +68,9 @@
                   </li>
               </ul>
           </div>
-          	<div class="panel-footer">
-          	
-          	 <div style="text-align:right; vertical-align:middel;"><input class="btn btn-default" id="toTop" type="submit" onclick="toTop()" value="返回页面顶部"></input></div>
-          	</div>
+          <div class="panel-footer">          	
+          <div style="text-align:right; vertical-align:middel;"><input class="btn btn-default" id="toTop" type="submit" onclick="toTop()" value="返回页面顶部"></input></div>
+          </div>
       </div>
   </div>
 </div>
