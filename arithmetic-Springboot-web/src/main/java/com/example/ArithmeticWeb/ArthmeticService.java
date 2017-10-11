@@ -24,7 +24,7 @@ public class ArthmeticService {
 	}
 	
 	public boolean writeTxtFile(int right,int wrong){
-		File fileName = new File("d:/record.txt");
+		File fileName = new File("e:/record.txt");
 		String content = right +"\t"+wrong;
 		try{
 			if(!fileName.exists()){  
@@ -44,7 +44,7 @@ public class ArthmeticService {
 		  String result=null;  
 		  FileReader fileReader=null;  
 		  BufferedReader bufferedReader=null;  
-		  File fileName = new File("d:/record.txt");
+		  File fileName = new File("e:/record.txt");
 		  System.out.println(fileName.getAbsolutePath());
 		  try{  
 			  if(!fileName.exists()){  
